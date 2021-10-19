@@ -1,6 +1,6 @@
 package com.atmmachine;
 
-public class NoDebitCard implements AtmMachineState{
+public class NoDebitCardState implements AtmMachineState{
 
     @Override
     public void insertDebitCard() {

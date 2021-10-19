@@ -14,7 +14,7 @@ public class AtmMachine {
 
     }
 
-    public void enterpin() {
+    public void enterPin() {
         // have to add functionality
         System.out.println("Enter the pin ");
 
@@ -26,7 +26,7 @@ public class AtmMachine {
     }
 
     public void checkBalance() {
-        // have to add the functionality
+        // have to a0dd the functionality
     }
 
 }

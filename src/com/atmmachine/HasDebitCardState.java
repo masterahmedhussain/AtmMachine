@@ -1,6 +1,6 @@
 package com.atmmachine;
 
-public class HasDebitCard implements AtmMachineState {
+public class HasDebitCardState implements AtmMachineState {
     public void insertDebitCard(){
         System.out.println("Debit card is already inserted");
     }
