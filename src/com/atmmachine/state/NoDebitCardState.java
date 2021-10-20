@@ -26,6 +26,6 @@ public class NoDebitCardState implements AtmMachineState{
     @Override
     public int withdrawMoney(int withdraw, int balance) {
         // TODO Auto-generated method stub
-        return 0;
+        return 0;}
     
 }
