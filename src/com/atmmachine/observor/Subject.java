@@ -1,7 +1,7 @@
 package com.atmmachine.observor;
 
 public interface Subject {
-	public void registerObserver(Observer o);
-	public void removeObserver(Observer o);
-	public void notifyObservers();
+	public void attach(Observer o);
+    public void detach(Observer o);
+	public void notifyUpdate(Message m);
 }   

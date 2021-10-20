@@ -1,4 +1,4 @@
-package com.atmmachine;
+package com.atmmachine.state;
 
 public class NoDebitCardState implements AtmMachineState{
 
@@ -24,11 +24,8 @@ public class NoDebitCardState implements AtmMachineState{
     }
 
     @Override
-    public void withdrawMoney() {
+    public int withdrawMoney(int withdraw, int balance) {
         // TODO Auto-generated method stub
-        System.out.println("Insert the card first to withdraw the money");
-        
-    }
-
+        return 0;
     
 }

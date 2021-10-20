@@ -1,4 +1,4 @@
-package com.atmmachine;
+package com.atmmachine.state;
 
 public class AtmMachine {
 
