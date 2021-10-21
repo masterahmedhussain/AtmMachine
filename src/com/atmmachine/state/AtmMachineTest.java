@@ -6,6 +6,7 @@ import java.util.Scanner;
 import com.atmmachine.factory.Currency;
 import com.atmmachine.factory.CurrencyFactory;
 import com.atmmachine.observor.*;
+import com.atmmachine.proxy.*;
 
 //create ATMExample class to implement the ATM functionality  
 public class AtmMachineTest {
@@ -37,13 +38,22 @@ public class AtmMachineTest {
 
         atmMachine.insertPin(1234);
 
+        // Testing the proxy pattern
+
+        GetATMData realATMMachine = new ATMMachine();
+
+        GetATMData atmProxy = new ATMProxy();
+
+        System.out.println("\nCurrent ATM State " + atmProxy.getATMState());
+
+        System.out.println("\nCash in ATM Machine $" + atmProxy.getCashInMachine());
+
         // Testing the factory pattern and showing which currency is going to accepted
         // by the ATM machine.
-        Currency euro = CurrencyFactory.createCurrency("EUR");
-        System.out.println("Curreny accepted by the this atm is " + euro);
 
         Currency dollar = CurrencyFactory.createCurrency("US");
-        System.out.println("Currency accepted by this ATM is " + dollar);
+        String a = dollar.getCurrency();
+        System.out.println("Currency accepted by this ATM is " + a);
 
         // create scanner class object to get choice of user
         Scanner sc = new Scanner(System.in);
@@ -51,6 +61,8 @@ public class AtmMachineTest {
 
         while (true) {
             System.out.println("Welcome to the ATM Machine\n");
+            System.out.println("\nCurrent ATM State " + atmProxy.getATMState());
+            System.out.println("\nCash in ATM Machine $" + atmProxy.getCashInMachine());
             System.out.println("This ATM accepts only " + dollar + "Currency");
             System.out.println("Select the options for the below options: ");
             System.out.println("1. To deposit the amount");
