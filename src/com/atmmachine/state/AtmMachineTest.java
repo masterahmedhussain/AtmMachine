@@ -98,6 +98,7 @@ public class AtmMachineTest {
             case 4:
                 // exit from the menu
                 System.exit(0);
+                sc.close();
             }
         }
     }
