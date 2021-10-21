@@ -1,0 +1,5 @@
+I had a fun making this application my only challenge was to what pattern should I use to solve the particular problem.
+THen does some research on the design patterns what can I use to at last decided the 4 design patterns
+that can be used to in this application. 
+
+After finding the patterns the next difficult part was to implement all four design patterns into the application.

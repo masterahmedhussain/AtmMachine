@@ -9,7 +9,7 @@ import com.atmmachine.observor.*;
 import com.atmmachine.proxy.*;
 
 //create ATMExample class to implement the ATM functionality  
-public class AtmMachineTest {
+public class AtmMachineMain {
     public static final String balance = null;
 
     // main method starts
@@ -20,32 +20,23 @@ public class AtmMachineTest {
         int deposit;
         int withdraw = 0;
 
-        // Checking the state design pattern
+        // Checking the state design pattern Test case 
 
         ATMMachine atmMachine = new ATMMachine();
-
+        System.out.println("State design pattern");
         atmMachine.insertCard();
-
         atmMachine.ejectCard();
-
         atmMachine.insertCard();
-
         atmMachine.insertPin(1234);
-
         atmMachine.requestCash(2000);
-
         atmMachine.insertCard();
-
         atmMachine.insertPin(1234);
 
-        // Testing the proxy pattern
-
-        GetATMData realATMMachine = new ATMMachine();
+        // Testing the proxy pattern Test Case 
 
         GetATMData atmProxy = new ATMProxy();
-
+        System.out.println("Testing proxy pattern");
         System.out.println("\nCurrent ATM State " + atmProxy.getATMState());
-
         System.out.println("\nCash in ATM Machine $" + atmProxy.getCashInMachine());
 
         // Testing the factory pattern and showing which currency is going to accepted
@@ -57,13 +48,14 @@ public class AtmMachineTest {
 
         // create scanner class object to get choice of user
         Scanner sc = new Scanner(System.in);
+        // call the method from the observer pattern test case 
         MessagePublisher publisher = new MessagePublisher();
 
         while (true) {
             System.out.println("Welcome to the ATM Machine\n");
             System.out.println("\nCurrent ATM State " + atmProxy.getATMState());
             System.out.println("\nCash in ATM Machine $" + atmProxy.getCashInMachine());
-            System.out.println("This ATM accepts only " + dollar + "Currency");
+            System.out.println("This ATM accepts only " + a + " Currency");
             System.out.println("Select the options for the below options: ");
             System.out.println("1. To deposit the amount");
             System.out.println("2. To withdraw the amount");
@@ -86,7 +78,7 @@ public class AtmMachineTest {
                 System.out.println("Your Money has been successfully deposited");
                 System.out.println("");
 
-                // getting from the observoe pattern
+                // getting from the observer pattern test case
                 MessageUserDeposit msg = new MessageUserDeposit();
 
                 publisher.attach(msg);
