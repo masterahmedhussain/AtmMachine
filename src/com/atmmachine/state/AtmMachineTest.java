@@ -20,12 +20,25 @@ public class AtmMachineTest {
         int withdraw = 0;
 
         // Checking the state design pattern
-        AtmMachine atmMachine = new AtmMachine();
-        atmMachine.ejectDebitCard();
-        atmMachine.insertDebitCard();
-        atmMachine.insertDebitCard();
 
-        //Testing the factory pattern and showing which currency is going to accepted by the ATM machine.
+        ATMMachine atmMachine = new ATMMachine();
+
+        atmMachine.insertCard();
+
+        atmMachine.ejectCard();
+
+        atmMachine.insertCard();
+
+        atmMachine.insertPin(1234);
+
+        atmMachine.requestCash(2000);
+
+        atmMachine.insertCard();
+
+        atmMachine.insertPin(1234);
+
+        // Testing the factory pattern and showing which currency is going to accepted
+        // by the ATM machine.
         Currency euro = CurrencyFactory.createCurrency("EUR");
         System.out.println("Curreny accepted by the this atm is " + euro);
 
@@ -63,7 +76,7 @@ public class AtmMachineTest {
 
                 // getting from the observoe pattern
                 MessageUserDeposit msg = new MessageUserDeposit();
-                
+
                 publisher.attach(msg);
                 publisher.notifyUpdate(new Message(balance));
 
