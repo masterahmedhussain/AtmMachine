@@ -15,22 +15,10 @@ public class HasDebitCardState implements AtmMachineState {
     public void enterPin(){
         System.out.println("Pin is entered correctly");
     }
-    public int withdrawMoney(int withdraw , int balance){
+    public void withdrawMoney(){
 
                          
-        //check whether the balance is greater than or equal to the withdrawal amount  
-        if(balance >= withdraw)  
-        {  
-            //remove the withdrawl amount from the total balance  
-            balance = balance - withdraw;  
-            System.out.println("Please collect your money");  
-        }  
-        else  
-        {  
-            //show custom error message   
-            System.out.println("Insufficient Balance");  
-        }  
-        return balance;
+      
     }
 
 
