@@ -3,3 +3,14 @@ THen does some research on the design patterns what can I use to at last decided
 that can be used to in this application. 
 
 After finding the patterns the next difficult part was to implement all four design patterns into the application.
+For the state pattern, observer pattern and proxy pattern, It was easy to me implement but the factory pattern was little bit 
+tough to implement but I tried it hard to make work.I studied again the head fist design patterns book and github resource.
+ then I get the idea to implement the currency module.
+
+ while working with the other logic it was a bit hard but at the end managed to do it. this project has teached me many thing 
+ that how to use the 4 design pattern in the single application.
+
+ At the End thanks to the prof Michael Nowak who helped me in every steps.
+
+ Regards
+ Khaja Ahmed Hussain

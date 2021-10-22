@@ -1,7 +1,4 @@
 This is the ATM managment application where the customer can deposit , WIthdraw and check Balance .
-In this application there
-
- 
 
 In this there are four design patterns used.
 
@@ -20,3 +17,4 @@ So in this application the factory is used for the currency note that show which
 Observer pattern is used to send the sms to the user if any of the transactions had happened the user recieves the sms.
 
 
+    
