@@ -1,5 +1,10 @@
 This is the ATM managment application where the customer can deposit , WIthdraw and check Balance .
 
+To start the application run the AtmMachineMain.java 
+
+First It will test some of the test cases of the program after that it runs the full working application with the choices of 
+Deposite , Withdraw and check balance. and the user can type the into into it and choose the option what is suitable.
+
 In this there are four design patterns used.
 
 1.State design pattern
@@ -17,4 +22,4 @@ So in this application the factory is used for the currency note that show which
 Observer pattern is used to send the sms to the user if any of the transactions had happened the user recieves the sms.
 
 
-    
+All the design pattern code is in different packages and named properly
